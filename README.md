@@ -3,6 +3,7 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability)](https://codeclimate.com/github/codeclimate/codeclimate/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/test_coverage)](https://codeclimate.com/github/codeclimate/codeclimate/test_coverage)
 
-[brain-even](https://asciinema.org/a/KU7zwUkzIyCAGSzipLvjkKPAa)
-[brain-calc](https://asciinema.org/a/fsRiCVqcuRfCflIFUja7gQj0C)
-[brain-gcd](https://asciinema.org/a/Yxaog9DDVA39RcpLirBWZovTs)
+[brain‑even](https://asciinema.org/a/KU7zwUkzIyCAGSzipLvjkKPAa)
+[brain‑calc](https://asciinema.org/a/fsRiCVqcuRfCflIFUja7gQj0C)
+[brain‑gcd](https://asciinema.org/a/Yxaog9DDVA39RcpLirBWZovTs)
+[brain‑progression](https://asciinema.org/a/d3gTHdKrH5Tpjt1RfGaFwWcEq)
