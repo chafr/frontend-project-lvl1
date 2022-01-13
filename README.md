@@ -1,7 +1,7 @@
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/chafr/frontend-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/chafr/frontend-project-lvl1/actions)
 [![Maintainability](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability)](https://codeclimate.com/github/codeclimate/codeclimate/maintainability)
-[![Test Coverage](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/test_coverage)](https://codeclimate.com/github/codeclimate/codeclimate/test_coverage)
+[![Node CI](https://github.com/chafr/frontend-project-lvl1/actions/workflows/make-lint.yml/badge.svg)](https://https://github.com/chafr/frontend-project-lvl1/actions/workflows/make-lint.yml)
 
 - [brain‑even](https://asciinema.org/a/KU7zwUkzIyCAGSzipLvjkKPAa)
 - [brain‑calc](https://asciinema.org/a/fsRiCVqcuRfCflIFUja7gQj0C)
