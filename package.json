@@ -19,7 +19,8 @@
   "homepage": "https://github.com/chafr/frontend-project-lvl1#readme",
   "bin": {
     "brain-games": "bin/brain-games.js",
-    "brain-even": "bin/brain-even.js"
+    "brain-even": "bin/games/brain-even.js",
+    "brain-calc": "bin/games/brain-calc.js"
   },
   "dependencies": {
     "eslint": "^8.6.0",
