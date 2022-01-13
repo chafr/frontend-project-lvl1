@@ -1,6 +1,6 @@
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/chafr/frontend-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/chafr/frontend-project-lvl1/actions)
-[![Node CI](https://github.com/chafr/frontend-project-lvl1/actions/workflows/make-lint.yml/badge.svg)](https://https://github.com/chafr/frontend-project-lvl1/actions/workflows/make-lint.yml)
+[![Node CI](https://github.com/chafr/frontend-project-lvl1/actions/workflows/nodejs.yml/badge.svg)](https://https://github.com/chafr/frontend-project-lvl1/actions/workflows/nodejs.yml)
 
 - [brain‑even](https://asciinema.org/a/KU7zwUkzIyCAGSzipLvjkKPAa)
 - [brain‑calc](https://asciinema.org/a/fsRiCVqcuRfCflIFUja7gQj0C)
