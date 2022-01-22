@@ -4,8 +4,9 @@ import name from './cli.js';
 const initRandomNum = (minNum = 1, maxNum = 100) => Math.floor(Math.random() * maxNum) + minNum;
 
 const startGame = (initQuestionAnswer) => {
+  const questionsTotal = 3;
   let questionNumber = 1;
-  while (questionNumber <= 3) {
+  while (questionNumber <= questionsTotal) {
     const { question, correctAnswer } = initQuestionAnswer();
     console.log(`Question: ${question}`);
     const userAnswer = readlineSync.question('Your answer: ');

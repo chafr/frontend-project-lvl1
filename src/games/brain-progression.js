@@ -1,14 +1,12 @@
 #!/usr/bin/env node
 
-import name from '../../src/cli.js';
-import { initRandomNum, startGame } from '../../src/index.js';
+import name from '../cli.js';
+import { initRandomNum, startGame } from '../index.js';
 
 console.log(`Hello, ${name}`);
 console.log('What number is missing in the progression?');
 
-const initQuestionAnswer = () => {
-  const num1 = initRandomNum();
-  const num2 = initRandomNum();
+const makeProgression = (num1, num2) => {
   const difference = num1 - num2;
   const progression = [num1, num2];
   for (let i = progression.length - 1; i < 9; i += 1) {
@@ -17,6 +15,13 @@ const initQuestionAnswer = () => {
     progression.push(newNum);
   }
 
+  return progression;
+};
+
+const initQuestionAnswer = () => {
+  const num1 = initRandomNum();
+  const num2 = initRandomNum();
+  const progression = makeProgression(num1, num2);
   const indexHiddenItem = initRandomNum(0, 10);
   const hiddenItem = progression[indexHiddenItem];
   progression[indexHiddenItem] = '..';

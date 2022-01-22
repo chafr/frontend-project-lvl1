@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
-import name from '../../src/cli.js';
-import { initRandomNum, startGame } from '../../src/index.js';
+import name from '../cli.js';
+import { initRandomNum, startGame } from '../index.js';
 
 console.log(`Hello, ${name}`);
 console.log('What is the result of the expression?');
