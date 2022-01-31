@@ -1,12 +1,10 @@
-#!/usr/bin/env node
-
 import name from '../cli.js';
-import { initRandomNum, startGame } from '../index.js';
+import { initRandomNum } from '../index.js';
 
 console.log(`Hello, ${name}`);
 console.log('What is the result of the expression?');
 
-const initQuestionAnswer = () => {
+export default () => {
   const initAdding = () => {
     const num1 = initRandomNum();
     const num2 = initRandomNum();
@@ -34,5 +32,3 @@ const initQuestionAnswer = () => {
   const operations = [initAdding, initSubtracting, initMultiplication];
   return operations[Math.floor(Math.random() * operations.length)]();
 };
-
-startGame(initQuestionAnswer);

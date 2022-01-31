@@ -1,12 +1,10 @@
-#!/usr/bin/env node
-
 import name from '../cli.js';
-import { initRandomNum, startGame } from '../index.js';
+import { initRandomNum } from '../index.js';
 
 console.log(`Hello, ${name}`);
 console.log('Find the greatest common divisor of given numbers.');
 
-const initQuestionAnswer = () => {
+export default () => {
   const num1 = initRandomNum();
   const num2 = initRandomNum();
   const question = `${num1} ${num2}`;
@@ -20,5 +18,3 @@ const initQuestionAnswer = () => {
 
   return null;
 };
-
-startGame(initQuestionAnswer);

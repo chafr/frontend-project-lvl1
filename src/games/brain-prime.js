@@ -1,12 +1,10 @@
-#!/usr/bin/env node
-
 import name from '../cli.js';
-import { initRandomNum, startGame } from '../index.js';
+import { initRandomNum } from '../index.js';
 
 console.log(`Hello, ${name}`);
 console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
 
-const initQuestionAnswer = () => {
+export default () => {
   const question = initRandomNum(2);
   for (let i = Math.floor(question / 2); i >= 2; i -= 1) {
     if (question % i === 0) {
@@ -18,5 +16,3 @@ const initQuestionAnswer = () => {
   const correctAnswer = 'yes';
   return { question, correctAnswer };
 };
-
-startGame(initQuestionAnswer);

@@ -1,7 +1,5 @@
-#!/usr/bin/env node
-
 import name from '../cli.js';
-import { initRandomNum, startGame } from '../index.js';
+import { initRandomNum } from '../index.js';
 
 console.log(`Hello, ${name}`);
 console.log('What number is missing in the progression?');
@@ -18,7 +16,7 @@ const makeProgression = (num1, num2) => {
   return progression;
 };
 
-const initQuestionAnswer = () => {
+export default () => {
   const num1 = initRandomNum();
   const num2 = initRandomNum();
   const progression = makeProgression(num1, num2);
@@ -29,5 +27,3 @@ const initQuestionAnswer = () => {
   const correctAnswer = String(hiddenItem);
   return { question, correctAnswer };
 };
-
-startGame(initQuestionAnswer);
