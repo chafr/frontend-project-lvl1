@@ -1,8 +1,4 @@
-import name from '../cli.js';
-import { initRandomNum } from '../index.js';
-
-console.log(`Hello, ${name}`);
-console.log('Answer "yes" if the number is even, otherwise answer "no".');
+import initRandomNum from '../init-random-num.js';
 
 export default () => {
   const question = initRandomNum();

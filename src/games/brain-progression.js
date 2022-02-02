@@ -1,13 +1,10 @@
-import name from '../cli.js';
-import { initRandomNum } from '../index.js';
-
-console.log(`Hello, ${name}`);
-console.log('What number is missing in the progression?');
+import initRandomNum from '../init-random-num.js';
 
 const makeProgression = (num1, num2) => {
   const difference = num1 - num2;
   const progression = [num1, num2];
-  for (let i = progression.length - 1; i < 9; i += 1) {
+  const lastIndexProgression = 9;
+  for (let i = progression.length - 1; i < lastIndexProgression; i += 1) {
     const lastNum = progression[i];
     const newNum = lastNum - difference;
     progression.push(newNum);
@@ -20,7 +17,8 @@ export default () => {
   const num1 = initRandomNum();
   const num2 = initRandomNum();
   const progression = makeProgression(num1, num2);
-  const indexHiddenItem = initRandomNum(0, 10);
+  const progressionLength = progression.length;
+  const indexHiddenItem = initRandomNum(0, progressionLength);
   const hiddenItem = progression[indexHiddenItem];
   progression[indexHiddenItem] = '..';
   const question = progression.join(' ');

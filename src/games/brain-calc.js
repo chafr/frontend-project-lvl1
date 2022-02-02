@@ -1,34 +1,24 @@
-import name from '../cli.js';
-import { initRandomNum } from '../index.js';
-
-console.log(`Hello, ${name}`);
-console.log('What is the result of the expression?');
+import initRandomNum from '../init-random-num.js';
 
 export default () => {
-  const initAdding = () => {
-    const num1 = initRandomNum();
-    const num2 = initRandomNum();
-    const question = `${num1} + ${num2}`;
-    const correctAnswer = String(num1 + num2);
-    return { question, correctAnswer };
-  };
+  const potentialOperators = ['+', '-', '*'];
+  const operator = potentialOperators[initRandomNum(0, 3)];
+  const num1 = initRandomNum();
+  const num2 = initRandomNum();
+  const question = `${num1} ${operator} ${num2}`;
+  let correctAnswer = '';
 
-  const initSubtracting = () => {
-    const num1 = initRandomNum();
-    const num2 = initRandomNum();
-    const question = `${num1} - ${num2}`;
-    const correctAnswer = String(num1 - num2);
-    return { question, correctAnswer };
-  };
+  switch (operator) {
+    case potentialOperators[0]:
+      correctAnswer = String(num1 + num2);
+      break;
 
-  const initMultiplication = () => {
-    const num1 = initRandomNum();
-    const num2 = initRandomNum();
-    const question = `${num1} * ${num2}`;
-    const correctAnswer = String(num1 * num2);
-    return { question, correctAnswer };
-  };
+    case potentialOperators[1]:
+      correctAnswer = String(num1 - num2);
+      break;
 
-  const operations = [initAdding, initSubtracting, initMultiplication];
-  return operations[Math.floor(Math.random() * operations.length)]();
+    default:
+      correctAnswer = String(num1 * num2);
+  }
+  return { question, correctAnswer };
 };

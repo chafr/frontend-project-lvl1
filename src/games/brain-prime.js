@@ -1,8 +1,4 @@
-import name from '../cli.js';
-import { initRandomNum } from '../index.js';
-
-console.log(`Hello, ${name}`);
-console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
+import initRandomNum from '../init-random-num.js';
 
 export default () => {
   const question = initRandomNum(2);

@@ -1,9 +1,7 @@
 import readlineSync from 'readline-sync';
 import name from './cli.js';
 
-const initRandomNum = (minNum = 1, maxNum = 100) => Math.floor(Math.random() * maxNum) + minNum;
-
-const startGame = (initQuestionAnswer) => {
+export default (initQuestionAnswer) => {
   const questionsTotal = 3;
   let questionNumber = 1;
   while (questionNumber <= questionsTotal) {
@@ -22,5 +20,3 @@ const startGame = (initQuestionAnswer) => {
 
   console.log(`Congratulations, ${name}!`);
 };
-
-export { initRandomNum, startGame };
