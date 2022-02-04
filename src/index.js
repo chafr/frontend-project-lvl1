@@ -1,7 +1,9 @@
 import readlineSync from 'readline-sync';
 import name from './cli.js';
 
-export default (initQuestionAnswer) => {
+export default (rule, initQuestionAnswer) => {
+  console.log(`Hello, ${name}`);
+  console.log(rule);
   const questionsTotal = 3;
   let questionNumber = 1;
   while (questionNumber <= questionsTotal) {

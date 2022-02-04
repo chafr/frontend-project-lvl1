@@ -1,4 +1,5 @@
 import initRandomNum from '../init-random-num.js';
+import startGame from '../index.js';
 
 const makeProgression = (num1, num2) => {
   const difference = num1 - num2;
@@ -13,7 +14,7 @@ const makeProgression = (num1, num2) => {
   return progression;
 };
 
-export default () => {
+const initQuestionAnswer = () => {
   const num1 = initRandomNum();
   const num2 = initRandomNum();
   const progression = makeProgression(num1, num2);
@@ -24,4 +25,9 @@ export default () => {
   const question = progression.join(' ');
   const correctAnswer = String(hiddenItem);
   return { question, correctAnswer };
+};
+
+export default () => {
+  const rule = 'What number is missing in the progression?';
+  return startGame(rule, initQuestionAnswer);
 };

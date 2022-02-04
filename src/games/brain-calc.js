@@ -1,6 +1,7 @@
 import initRandomNum from '../init-random-num.js';
+import startGame from '../index.js';
 
-export default () => {
+const initQuestionAnswer = () => {
   const potentialOperators = ['+', '-', '*'];
   const operator = potentialOperators[initRandomNum(0, 3)];
   const num1 = initRandomNum();
@@ -20,5 +21,11 @@ export default () => {
     default:
       correctAnswer = String(num1 * num2);
   }
+
   return { question, correctAnswer };
+};
+
+export default () => {
+  const rule = 'What is the result of the expression?';
+  return startGame(rule, initQuestionAnswer);
 };

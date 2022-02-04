@@ -1,4 +1,5 @@
 import initRandomNum from '../init-random-num.js';
+import startGame from '../index.js';
 
 const calculateGcd = (num1, num2) => {
   const minNum = Math.min(num1, num2);
@@ -12,7 +13,7 @@ const calculateGcd = (num1, num2) => {
   return null;
 };
 
-export default () => {
+const initQuestionAnswer = () => {
   const num1 = initRandomNum();
   const num2 = initRandomNum();
   const question = `${num1} ${num2}`;
@@ -21,4 +22,9 @@ export default () => {
   }
 
   return null;
+};
+
+export default () => {
+  const rule = 'Find the greatest common divisor of given numbers.';
+  return startGame(rule, initQuestionAnswer);
 };
