@@ -17,8 +17,9 @@ const initQuestionAnswer = () => {
   const num1 = initRandomNum();
   const num2 = initRandomNum();
   const question = `${num1} ${num2}`;
-  if (calculateGcd(num1, num2)) {
-    return { question, correctAnswer: calculateGcd(num1, num2) };
+  const gcd = calculateGcd(num1, num2);
+  if (gcd) {
+    return { question, correctAnswer: String(gcd) };
   }
 
   return null;

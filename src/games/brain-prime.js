@@ -1,16 +1,19 @@
 import initRandomNum from '../init-random-num.js';
 import startGame from '../index.js';
 
-const initQuestionAnswer = () => {
-  const question = initRandomNum(2);
-  for (let i = Math.floor(question / 2); i >= 2; i -= 1) {
-    if (question % i === 0) {
-      const correctAnswer = 'no';
-      return { question, correctAnswer };
+const isPrime = (num) => {
+  for (let i = Math.floor(num / 2); i >= 2; i -= 1) {
+    if (num % i === 0) {
+      return false;
     }
   }
 
-  const correctAnswer = 'yes';
+  return true;
+};
+
+const initQuestionAnswer = () => {
+  const question = initRandomNum(2);
+  const correctAnswer = isPrime(question) ? 'yes' : 'no';
   return { question, correctAnswer };
 };
 

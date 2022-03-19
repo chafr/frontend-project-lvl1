@@ -3,23 +3,29 @@ import startGame from '../index.js';
 
 const initQuestionAnswer = () => {
   const potentialOperators = ['+', '-', '*'];
-  const operator = potentialOperators[initRandomNum(0, 3)];
+  const operatorsCount = potentialOperators.length;
+  const operator = potentialOperators[initRandomNum(0, operatorsCount)];
   const num1 = initRandomNum();
   const num2 = initRandomNum();
   const question = `${num1} ${operator} ${num2}`;
+  const [sum, diff, multiply] = potentialOperators;
   let correctAnswer = '';
 
   switch (operator) {
-    case potentialOperators[0]:
+    case sum:
       correctAnswer = String(num1 + num2);
       break;
 
-    case potentialOperators[1]:
+    case diff:
       correctAnswer = String(num1 - num2);
       break;
 
-    default:
+    case multiply:
       correctAnswer = String(num1 * num2);
+      break;
+
+    default:
+      return 'Error: unknown operation';
   }
 
   return { question, correctAnswer };
